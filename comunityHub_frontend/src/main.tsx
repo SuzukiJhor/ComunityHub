@@ -27,7 +27,7 @@ const RouterComponent = () => {
    return (
      <ClerkProvider
       publishableKey={import.meta.env.VITE_CLERK_PUBLISHABLE_KEY}
-      navigate={(to) => { navigate(to) }}
+      navigate={(to) => navigate(to)}
     >
       <Routes>
         <Route path="" element={<RootLayout />}>
