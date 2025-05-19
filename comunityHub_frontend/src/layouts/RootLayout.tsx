@@ -1,10 +1,12 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
+import Sidebar from '../components/navigation/Sidebar'
 
 function RootLayout() {
   return (
-    <div>RootLayout
-         <Outlet/>
+    <div>
+      <Sidebar />
+      <Outlet/>
     </div>
   )
 }
