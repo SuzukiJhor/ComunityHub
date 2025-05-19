@@ -3,11 +3,11 @@ import classes from "./Sidebar.module.css"
 import { UserButton } from '@clerk/clerk-react'
 import { Button, Center, Stack, useMantineColorScheme } from '@mantine/core'
 import { IconArrowsJoin, IconMoon, IconPlus, IconSun } from '@tabler/icons-react'
-import { useColorScheme } from '@mantine/hooks'
+import { useModal } from '../../../hooks/useModal'
 
 function Sidebar() {
  const { colorScheme, toggleColorScheme } = useMantineColorScheme();
-
+  const createServerModal = useModal("CreateServer");
   return (
     <nav className={classes.navbar}>
       <Stack>
@@ -16,7 +16,7 @@ function Sidebar() {
             className={classes.link}
             variant="subtle"
             radius={100}
-            onClick={()=> console.log("Create new server")}
+            onClick={createServerModal.openModal}
           >
             <IconPlus radius={100} />
           </Button>
