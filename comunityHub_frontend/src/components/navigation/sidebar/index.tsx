@@ -1,12 +1,13 @@
 import React from 'react'
 import classes from "./Sidebar.module.css"
 import { UserButton } from '@clerk/clerk-react'
-import { Button, Center, Stack } from '@mantine/core'
+import { Button, Center, Stack, useMantineColorScheme } from '@mantine/core'
 import { IconArrowsJoin, IconMoon, IconPlus, IconSun } from '@tabler/icons-react'
 import { useColorScheme } from '@mantine/hooks'
 
 function Sidebar() {
- const colorScheme = useColorScheme();
+ const { colorScheme, toggleColorScheme } = useMantineColorScheme();
+
   return (
     <nav className={classes.navbar}>
       <Stack>
@@ -34,19 +35,18 @@ function Sidebar() {
           {'links'}
         </Stack>
       </Stack>
-
       <Stack justify="center" align="center">
         <Button
           className={classes.link}
           variant="subtle"
-          onClick={()=> console.log("Toggle theme")}
+          onClick={toggleColorScheme}
           radius={100}
           p={0}
         >
           {colorScheme === "dark" ? (
-            <IconMoon radius={100} />
-          ) : (
             <IconSun radius={100} />
+          ) : (
+            <IconMoon radius={100} />
           )}
         </Button>
         <UserButton />
