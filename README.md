@@ -1,5 +1,7 @@
 ## 🛠️ Technologies Used in This Full-Stack Project
 
+- **Front-end**: React  
+- **Back-end**: NestJS
 
 - **Docker** – Containerization for consistent environments, easy deployment, and dependency management.
 
