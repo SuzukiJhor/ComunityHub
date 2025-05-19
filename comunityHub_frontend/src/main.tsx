@@ -1,14 +1,13 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.tsx'
+import "./index.css"
 import { MantineProvider } from '@mantine/core'
 import '@mantine/core/styles.css';
 import { ClerkProvider, RedirectToSignIn, SignedIn, SignedOut } from '@clerk/clerk-react'
 import { BrowserRouter, Route, Routes, useNavigate, type To } from 'react-router-dom'
 import HomePage from './pages/HomePage.tsx'
 import RootLayout from './layouts/RootLayout.tsx'
-import Sidebar from './components/navigation/Sidebar.tsx'
 
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -27,19 +26,19 @@ const RouterComponent = () => {
    return (
      <ClerkProvider
       publishableKey={import.meta.env.VITE_CLERK_PUBLISHABLE_KEY}
-      navigate={(to) => navigate(to)}
+      navigate={(to) => { navigate(to) }}
     >
       <Routes>
-        <Route path="" element={<RootLayout />} /> 
+        <Route path="" element={<RootLayout />}>
           <Route
-          index
-          element={
-            <ProtectedRoute>
-              <HomePage />
-            </ProtectedRoute>
-          }
-        />
-        <Route />
+            index
+            element={
+              <ProtectedRoute>
+                <HomePage />
+              </ProtectedRoute>
+            }
+          />
+        </Route>
       </Routes>
     </ClerkProvider>
    )
