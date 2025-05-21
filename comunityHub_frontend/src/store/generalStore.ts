@@ -1,6 +1,6 @@
 import { create } from "zustand"
 import { persist } from "zustand/middleware"
-import type { ChannelType } from "../gql/graphql"
+import { ChannelType } from "../gql/graphql"
 
 export type Modal =
   | "CreateServer"
