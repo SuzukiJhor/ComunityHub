@@ -18,4 +18,4 @@
 
 <br>
   
-<img src="https://github.com/user-attachments/assets/e88be656-50a0-4fa7-a9c7-54463609732c" alt="diagrama-bd-prisma-moreless" width="400" />
+<img src="https://github.com/user-attachments/assets/6bef3cf1-1bc6-4ab2-aca4-b6e9fc0b3a0e" alt="diagrama-bd-prisma-moreless" width="500" />
