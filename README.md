@@ -6,7 +6,7 @@
 
 - **Back-end**: NestJS
     - **Prisma** – Is used as an alternative to writing plain SQL, or using another database access tool such as SQL query builders.
-    - **GraphQL Code Generator** – Automatically generates TypeScript typings and code based on your GraphQL schema and operations.
+    - **GraphQL** – API design with a single endpoint for querying and integration.
     - **GraphQL Code Generator** – Automatically generates TypeScript typings and code based on your GraphQL schema and operations.
     - **Apollo Client** – State management and data fetching for GraphQL APIs in React applications.
 
