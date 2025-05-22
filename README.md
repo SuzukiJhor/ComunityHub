@@ -5,7 +5,8 @@
     - **Zustand** - library for managing state in React applications, focusing on simplicity and performance.
 
 - **Back-end**: NestJS
-    - **GraphQL** – API design with a single endpoint for querying and integration.
+    - **Prisma** – Is used as an alternative to writing plain SQL, or using another database access tool such as SQL query builders.
+    - **GraphQL Code Generator** – Automatically generates TypeScript typings and code based on your GraphQL schema and operations.
     - **GraphQL Code Generator** – Automatically generates TypeScript typings and code based on your GraphQL schema and operations.
     - **Apollo Client** – State management and data fetching for GraphQL APIs in React applications.
 
