@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Group, Modal, rem, Stack, Text } from '@mantine/core';
+import { Button, Flex, Group, Image, Modal, rem, Stack, Text, TextInput } from '@mantine/core';
 import { useModal } from '../../../hooks/useModal';
 import { useForm } from "@mantine/form"
 import classes from "./CreateServerModal.module.css"
@@ -10,6 +10,10 @@ function CreateServerModal() {
     const { isOpen, closeModal } = useModal("CreateServer");
     const [imagePreview, setImagePreview] = React.useState<string | null>(null)
     const [file, setFile] = React.useState<File | null>(null)
+    // const [createServer, { loading, error }] = useMutation<
+    //   CreateServerMutation,
+    //   CreateServerMutationVariables
+    // >(CREATE_SERVER)
     const form = useForm({
       initialValues: {
         name: '', 
@@ -66,13 +70,61 @@ function CreateServerModal() {
                     <Text size="sm" c="dimmed" inline mt={7}>
                       Carregar um ícone de servidor
                     </Text>
+                      {/* {error?.message && !file && (
+                      <Text c="red">{error?.message}</Text>
+                    )} */}
                   </Stack>
                 </Group>
 
               </Dropzone>
             )}
-            
+                        {imagePreview && (
+              <Flex pos="relative" w={rem(150)} h={rem(150)} mt="md">
+                <>
+                  <Button
+                    onClick={() => {
+                      setImagePreview(null)
+                      setFile(null)
+                    }}
+                    color="red"
+                    pos="absolute"
+                    style={{
+                      zIndex: 1,
+                      borderRadius: "50%",
+                      padding: 0,
+                      width: rem(30),
+                      height: rem(30),
+                      top: 0,
+                      right: 18,
+                    }}
+                  >
+                    <IconX color="white" />
+                  </Button>
+                  <Image
+                    src={imagePreview}
+                    width={rem(150)}
+                    height={rem(150)}
+                    radius={"50%"}
+                  />
+                </>
+              </Flex>
+            )}
           </Flex>
+              <TextInput
+              label="Nome Servidor"
+              placeholder="insira o nome do servidor"
+              {...form.getInputProps("name")}
+              error={form.errors.name}
+            />
+            <Button
+              disabled={!!form.errors.name}
+              w={"50%"}
+              type="submit"
+              variant="gradient"
+              mt="md"
+            >
+              Criar Servidor
+            </Button>
         </Stack>
       </form>
     </Modal>
