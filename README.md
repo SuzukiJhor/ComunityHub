@@ -19,3 +19,6 @@
 <br>
   
 <img src="https://github.com/user-attachments/assets/6bef3cf1-1bc6-4ab2-aca4-b6e9fc0b3a0e" alt="diagrama-bd-prisma-moreless" width="500" />
+
+<br><br><br><br>
+![License](https://img.shields.io/badge/license-MIT-green.svg)
