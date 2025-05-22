@@ -11,3 +11,11 @@
     - **Apollo Client** – State management and data fetching for GraphQL APIs in React applications.
 
 - **Docker** – Containerization for consistent environments, easy deployment, and dependency management.
+
+
+
+- # Diagram Database
+
+<br>
+  
+<img src="https://github.com/user-attachments/assets/e88be656-50a0-4fa7-a9c7-54463609732c" alt="diagrama-bd-prisma-moreless" width="400" />
